@@ -1,0 +1,1 @@
+/bin/c++ -g CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o -o ex1 

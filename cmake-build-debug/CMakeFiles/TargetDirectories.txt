@@ -1,0 +1,3 @@
+/home/ido/Mitkadem1-Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ido/Mitkadem1-Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ido/Mitkadem1-Project/cmake-build-debug/CMakeFiles/ex1.dir

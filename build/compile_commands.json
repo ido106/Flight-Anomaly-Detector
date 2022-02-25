@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ido/Mitkadem1-Project/build",
+  "command": "/bin/c++   -g -std=gnu++11 -o CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o -c /home/ido/Mitkadem1-Project/anomaly_detection_util.cpp",
+  "file": "/home/ido/Mitkadem1-Project/anomaly_detection_util.cpp"
+}
+]
