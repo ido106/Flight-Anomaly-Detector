@@ -1,9 +1,4 @@
-/*
- * run2.cpp
- *
- *  Created on: 8 ����� 2019
- *      Author: Eli
- */
+
 
 #include <iostream>
 #include <fstream>
@@ -31,7 +26,7 @@ string readStr(int serverFD){
 	string serverInput="";
 	char c=0;
 	read(serverFD,&c,sizeof(char));
-	while(c!='\n'){				
+	while(c!='\n'){
 		serverInput+=c;
 		read(serverFD,&c,sizeof(char));
 	}
@@ -40,7 +35,7 @@ string readStr(int serverFD){
 
 void readMenue(ofstream& out,int serverFD){
 	bool done=false;
-	while(!done){			
+	while(!done){
 		// read string line
 		string serverInput = readStr(serverFD);
 		if(serverInput=="6.exit")
@@ -55,21 +50,21 @@ int initClient(int port)throw (const char*){
     struct hostent *server;
 
     serverFD = socket(AF_INET, SOCK_STREAM, 0);
-    if (serverFD < 0) 
+    if (serverFD < 0)
         throw "socket problem";
-    
+
 	server = gethostbyname("localhost");
 	if(server==NULL)
 		throw "no such host";
-	
+
     serv_addr.sin_family = AF_INET;
     bcopy((char *)server->h_addr,(char *)&serv_addr.sin_addr.s_addr,server->h_length);
-		 
+
     serv_addr.sin_port = htons(port);
-    if (connect(serverFD,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) 
+    if (connect(serverFD,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0)
 		throw "connection problem";
-		
-    return serverFD;	
+
+    return serverFD;
 }
 
 void clientSide1(int port,string outputFile)throw (const char*){
@@ -87,13 +82,13 @@ void clientSide1(int port,string outputFile)throw (const char*){
 void clientSide2(int port,string outputFile)throw (const char*){
 
 	int serverFD = initClient(port);
-	
+
 	ofstream out(outputFile);
 	ifstream in("input.txt");
 	string input="";
 	while(input!="6"){
 		readMenue(out,serverFD);
-		getline(in,input);			
+		getline(in,input);
 		writeStr(input,serverFD);
 		if(input=="1"){
 			out<<readStr(serverFD)<<endl; // please upload...
@@ -110,7 +105,7 @@ void clientSide2(int port,string outputFile)throw (const char*){
 			}
 			out<<readStr(serverFD)<<endl; // Upload complete
 		}
-		
+
 		if(input=="3"){
 			out<<readStr(serverFD)<<endl; // Anomaly... complete
 		}
@@ -125,9 +120,9 @@ void clientSide2(int port,string outputFile)throw (const char*){
 			out<<readStr(serverFD)<<endl; // FPR
 		}
 	}
-	in.close();	
+	in.close();
 	out.close();
-	
+
     close(serverFD);
 	cout<<"end of client 2"<<endl;
 }
@@ -148,10 +143,10 @@ size_t check(string outputFile,string expectedOutputFile){
 	return i;
 }
 
- 
+
 int main(){
 	srand (time(NULL));
-	int port=5000+ rand() % 1000;		
+	int port=5000+ rand() % 1000;
 	string outputFile1="output_menu";
 	string outputFile2="output";
 	int x=rand() % 1000;
@@ -159,7 +154,7 @@ int main(){
 	outputFile1+=".txt";
 	outputFile2+=to_string(x);
 	outputFile2+=".txt";
-	
+
 	try{
 		AnomalyDetectionHandler adh;
 		Server server(port);
@@ -176,7 +171,7 @@ int main(){
 
 	if(mistakes>0)
 		cout<<"you have "<<mistakes<<" mistakes in your output (-"<<(mistakes*2)<<")"<<endl;
-		
-	cout<<"done"<<endl;	
+
+	cout<<"done"<<endl;
 	return 0;
 }

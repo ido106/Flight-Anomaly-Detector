@@ -1,7 +1,4 @@
-/**
-Liron Balastra 206963316
-Ido Aharon 319024600
-**/
+
 
 #ifndef COMMANDS_H_
 #define COMMANDS_H_
@@ -25,28 +22,6 @@ public:
 	virtual ~DefaultIO(){}
 };
 
-//class StandardIO: public DefaultIO {
-//public:
-//    StandardIO():DefaultIO() {}
-//
-//    virtual string read() {
-//        string buff;
-//        cin >> buff;
-//        return buff;
-//    }
-//
-//    virtual void read(float* f) {
-//        cin >> (*f);
-//    }
-//
-//    virtual void write(string text) {
-//        cout << text << endl;
-//    }
-//
-//    virtual void write(float f) {
-//        cout << f << endl;
-//    }
-//};
 
 typedef struct{
     TimeSeries* trainTS;

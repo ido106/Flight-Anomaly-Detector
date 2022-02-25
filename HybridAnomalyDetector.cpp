@@ -1,7 +1,4 @@
-/**
-Liron Balastra 206963316
-Ido Aharon 319024600
-**/
+
 
 #include "HybridAnomalyDetector.h"
 
@@ -70,4 +67,3 @@ bool HybridAnomalyDetector::checkException (Point* p, correlatedFeatures current
 HybridAnomalyDetector::~HybridAnomalyDetector() {
     // TODO Auto-generated destructor stub
 }
-

@@ -1,7 +1,4 @@
-/**
-Liron Balastra 206963316
-Ido Aharon 319024600
-**/
+
 
 #ifndef SERVER_H_
 #define SERVER_H_

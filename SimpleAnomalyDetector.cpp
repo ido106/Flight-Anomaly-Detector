@@ -1,7 +1,4 @@
-/**
-Liron Balastra 206963316
-Ido Aharon 319024600
-**/
+
 
 #include "SimpleAnomalyDetector.h"
 #include "anomaly_detection_util.h"

@@ -1,7 +1,4 @@
-/**
-Liron Balastra 206963316
-Ido Aharon 319024600
-**/
+
 
 #ifndef CLI_H_
 #define CLI_H_

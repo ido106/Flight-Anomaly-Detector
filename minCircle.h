@@ -1,7 +1,4 @@
-/**
-Liron Balastra 206963316
-Ido Aharon 319024600
-**/
+
 
 #ifndef MINCIRCLE_H_
 #define MINCIRCLE_H_

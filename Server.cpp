@@ -1,7 +1,4 @@
-/**
-Liron Balastra 206963316
-Ido Aharon 319024600
-**/
+
 
 void signal_handler(int alarm);
 
@@ -59,4 +56,3 @@ void Server::stop(){
 }
 
 Server::~Server() {}
-
