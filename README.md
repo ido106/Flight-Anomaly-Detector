@@ -6,7 +6,7 @@ If there were, the program provides helpful data about the anomaly: when it occu
 
 ### Purpose
 The code will be used in Advanced Programming 2 course to write 3 applications:  
-1) Mobile application - flight simulator
+1) Mobile app - flight simulator
 2) Desktop app to investigate flights and detect anomalies
 3) Web app (SaaS) to detect anomalies
 
